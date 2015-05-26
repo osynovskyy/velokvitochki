@@ -77,8 +77,8 @@ if (!empty($_POST)) {
             '<p>PHONE: '.$_POST['phone'].'</p>'.
             '<p>EMAIL: '.$_POST['email'].'</p>'
         );
-    } else {
-        sendMail("panOsynovskyy@gmail.com", "VeloKvitochki - REGISTRATION #".$id,
+    } else { //velogoroshina@gmail.com
+        sendMail("panOsynovskyy@gmail.com, velogoroshina@gmail.com", "VeloKvitochki - REGISTRATION #".$id,
             '<p>ID:'.$id.'</p>'.
             '<p>NAME: '.$_POST['name'].'</p>'.
             '<p>CITY: '.$_POST['city'].'</p>'.
@@ -128,25 +128,38 @@ if (!empty($_POST)) {
             <section class="section clearfix">
                 <div class="row clearfix">
                     <section class="info column small-12 medium-6 large-9">
-                        <div class="wrapper">
-                            <div class="logo"></div>
-                            <div class="text">
-                                <h1>Четвертий дівчачий вєлопарад.<br />Дівчата в квіточку.</h1>
+                        <div class="wrapper clearfix">
+                            <div class="header clearfix">
+                                <div class="right">
+                                    <a href="http://velokvitochki.fixedgear.in.ua">
+                                        <div class="logo"></div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="text clearfix">
+                                <h1>Наш щоричний круїз жіночності, краси і квітів!</h1>
                                 <h2>20 червня 2015</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis accumsan dolor vel pellentesque. Nulla luctus ut nulla nec interdum. Nullam imperdiet risus ac eros finibus egestas. Integer tortor purus, aliquet quis nisi eget, commodo luctus dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis enim sit amet purus porttitor placerat. Donec non commodo arcu, ut condimentum ligula. Aenean nec ultrices nisi.</p>
+                                <p>Пані, вам вже і так все відомо: сукні, спідниці, туфлі на підборах — все у квіточку.</p>
+                                <p>Наше завдання: приголомшити Харків квітами і своєю красою на роверах!</p>
+                            </div>
+                            <div class="route">
+
+                            </div>
+                            <div class="text">
+                                <p>Як завжди, за найкащій образ очікують подарунки від наших друзів та партнерів.</p>
+                                <p>Цього року ми робимо для вас обов'язкову реєстрацію — для того, щоб кожна вєло-квіточка отримала власний номер та залишилася задоволеною нашим святом.</p>
+                            </div>
                         </div>
                     </section>
 
                     <section class="form column small-12 medium-6 large-3 clearfix">
-
                         <div class="wrapper clearfix">
-
                             <div id="reg-error" <?php if (-1 != $id) echo 'class="visuallyhidden"'?> >
                                 <div class="error">
                                     <h1>Ой, якась помилка</h1>
-
                                     <p>
-                                        Може ви ввели неправильні дані. Будь ласка, скористуйся підказками, та спробуй ще раз. Якщо не виходить, то спробуй ще раз через деякий час.
+                                        Може ви ввели неправильні дані, або за вашими емейлом чи телефоном вже є реєстрація у базі.
                                     </p>
                                 </div>
                             </div>
@@ -166,7 +179,7 @@ if (!empty($_POST)) {
                                         </div>
                                         <div class="form-row clearfix">
                                             <span>Місто:</span>
-                                            <input type="text" name="city" id="city" autocomplete="off" <?php echo 'value="'.$_POST['city'].'"'?>>
+                                            <input type="text" name="city" id="city" autocomplete="off" value="<?php echo empty($_POST['city'])?'Харків':$_POST['city']?>">
                                             <span <?php if (-1 != $id) echo 'class="note visuallyhidden"'; else echo 'class="note"' ?>>Дуже приємно дізнатися звідки наші учасніци.<br/>Наприклад, "Харків"</span>
                                         </div>
                                         <div class="form-row clearfix">
@@ -194,7 +207,7 @@ if (!empty($_POST)) {
                                 <h1>Дякуэмо</h1>
 
                                 <p>
-                                    Реєстрація на Четвертий дівчачий вєлопарад "Дівчата в квіточку" пройшла
+                                    Реєстрація на Жіночому Велодні "Дівчата в квіточку" пройшла
                                     вдало. Дякуємо та чекаємо на зустріч!
                                 </p>
 
@@ -210,6 +223,29 @@ if (!empty($_POST)) {
                         </div>
 
                     </section>
+                </div>
+            </section>
+            <section class="section clearfix">
+                <div class="row clearfix">
+                    <div class="sponsors clearfix">
+                        <h1>Наші друзі</h1>
+                        <div class="sponsor small-12 medium-3">
+                            <a href="http://vk.com/ehali_medvedi_1923" target="_blank" class="sponsor-1"></a>
+                            <span>Ехалимедведи пригощає велоквіточок кавою та смаколиками</span>
+                        </div>
+                        <div class="sponsor small-12 medium-3">
+                            <a href="https://vk.com/bikeplanet" target="_blank" class="sponsor-2"></a>
+                            <span>Велопланета надає чарівні ровери</span>
+                        </div>
+                        <div class="sponsor small-12 medium-3">
+                            <a href="https://vk.com/fastfeetclub" target="_blank" class="sponsor-3"></a>
+                            <span>Школа свінгових танців Fast Feet Club</span>
+                        </div>
+                        <div class="sponsor small-12 medium-3">
+                            <a href="https://vk.com/eco.snack" target="_blank" class="sponsor-4"></a>
+                            <span>Солодощі Эко-снэк</span>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

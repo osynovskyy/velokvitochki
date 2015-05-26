@@ -124,13 +124,23 @@ section.info div.wrapper {
     margin: auto 0;
 }
 
-section.info div.logo {
+section.info div.header {
     width: 100%;
-    height: 250px;
-    background: url("../img/header.png") top center no-repeat;
-    background-size: 300px;
+    height: 200px;
+}
 
-    margin: auto 0;
+section.info div.header div.logo {
+    width: 100%;
+    height: 100%;
+    background: url("../img/header-logo-medium.png") no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+section.info div.header div.right {
+    width: 100%;
+    height: 100%;
 }
 
 section.info h1 {
@@ -153,23 +163,98 @@ section.info div.text {
     line-height: 1.5em;
 }
 
-section.form {
-    background: #ffbb00 url("../img/bg-pattern.png") repeat;
-}
-
-section.form div#logo {
-    width: 200px;
-    height: 62px;
-    margin: 0 auto;
-    background: url("../img/logo.png") no-repeat;
-    background-size: 200px 62px;
+section.info div.route {
+    background: url("../img/route.png") no-repeat center;
+    background-size: 160px 200px;
+    width: 160px;
+    height: 200px;
+    float: left;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    section.form div#logo {
-        background: url("../img/logo@2x.png") no-repeat;
-        background-size: 200px 62px;
+    section.info div.route {
+        background: url("../img/route@2x.png") no-repeat center;
+        background-size: 160px 200px;
     }
+}
+
+div.sponsors {
+    margin: 0 auto;
+    background: #eee;
+    padding-bottom: 20px;
+}
+
+div.sponsors h1 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin: 5px 0 0 0;
+    line-height: 1.4em;
+    text-indent: 0;
+}
+
+div.sponsors div.sponsor {
+    float: left;
+    text-align: center;
+}
+
+div.sponsors div.sponsor a {
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+div.sponsors a.sponsor-1 {
+    background: url("../img/sponsors/ehali.png") no-repeat center;
+    background-size: contain;
+}
+
+div.sponsors a.sponsor-2 {
+    background: url("../img/sponsors/veloplaneta.png") no-repeat center;
+    background-size: contain;
+}
+
+div.sponsors a.sponsor-3 {
+    background: url("../img/sponsors/boogie.png") no-repeat center;
+    background-size: contain;
+}
+
+div.sponsors a.sponsor-4 {
+    background: url("../img/sponsors/ekosnack.png") no-repeat center;
+    background-size: contain;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    div.sponsors a.sponsor-1 {
+        background: url("../img/sponsors/ehali@2x.png") no-repeat center;
+        background-size: contain;
+    }
+
+    div.sponsors a.sponsor-2 {
+        background: url("../img/sponsors/veloplaneta@2x.png") no-repeat center;
+        background-size: contain;
+    }
+
+    div.sponsors a.sponsor-3 {
+        background: url("../img/sponsors/boogie@2x.png") no-repeat center;
+        background-size: contain;
+    }
+
+    div.sponsors a.sponsor-4 {
+        background: url("../img/sponsors/ekosnack@2x.png") no-repeat center;
+        background-size: contain;
+    }
+}
+
+div.sponsors div.sponsor span {
+    padding: 20px 10px;
+    font-style: italic;
+    font-size: 0.8em;
+    line-height: 0.8em;
+}
+
+section.form {
+    background: #ffbb00 url("../img/bg-pattern.png") repeat;
 }
 
 section.form h1 {
@@ -210,7 +295,7 @@ section.form input[type=submit] {
     border-radius: 4px;
     background: linear-gradient(#eee, #fff);
     margin-top: 20px;
-    padding: 5px 0;
+    padding: 10px 0;
     font-weight: 400;
 
     display: block;
@@ -337,11 +422,7 @@ section.form div.error {
     clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/*Responsive*/
 
 @media only screen and (min-width: 640px) {
     /* Style adjustments for viewports that meet the condition */
@@ -361,15 +442,15 @@ section.form div.error {
         float: left;
     }
 
-    section.info div.logo {
-        height: 300px;
-        background-size: 400px;
-    }
-
     section.form {
         float: right;
-        height: 100vh;
+        height: 100%;
         padding: 0;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 }
 
@@ -391,10 +472,42 @@ section.form div.error {
         float: left;
     }
 
-    section.info div.logo {
-        height: 400px;
-        background-size: 500px 400px;
+    section.info div.header {
+        background: url("../img/header-left-large.png") no-repeat left;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
     }
+
+    section.info div.header div.logo {
+        width: 35%;
+        height: 100%;
+        background: url("../img/header-logo-medium.png") no-repeat center;
+        background-size: contain;
+        margin: 0 auto;
+        display: block;
+    }
+
+    section.info div.header div.right {
+        background: url("../img/header-right-large.png") no-repeat right;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        float: right;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        section.info div.header {
+            background: url("../img/header-left-large@2x.png") no-repeat left;
+            background-size: contain;
+        }
+
+        section.info div.header div.right {
+            background: url("../img/header-right-large@2x.png") no-repeat right;
+            background-size: contain;
+        }
+    }
+
 }
 
 @media print,

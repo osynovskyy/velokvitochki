@@ -48,15 +48,15 @@ function getRegistrationDetails($id) {
 		die('Ошибка: нет идентификатора пользователя');
 	}
 ?>
-	<table cellpadding="0" cellspacing="0" style="color: #333;font-family: Verdana;font-size:12px;text-align: justify;margin: 0;padding: 0;background: #eee;width: 500px;margin: 0 auto;	border-radius: 5px;	padding: 10px;	border: 0;">
+	<table cellpadding="0" cellspacing="0" style="color: #333;font-family: Verdana;font-size:12px;text-align: justify;margin: 0;padding: 0;background: #eee;width: 500px;margin: 0 auto; border-radius: 5px; padding: 10px;	border: 0;">
         <tr>
-            <td colspan="3" style='text-indent: 10px; padding: 10px 0'>
-                <?=$info['name']?>, дякуємо за реєстрацію на <a href='http://velokvitochki.fixedgear.in.ua'>Четвертому дівчачому велопараді "Дівчата в квіточку"</a>.
+            <td colspan="3" style='text-indent: 10px; padding: 10px'>
+                <?=$info['name']?>, дякуємо за реєстрацію на <a href='http://velokvitochki.fixedgear.in.ua'>Жіночому Велодні "Дівчата в квіточку"</a>.
             </td>
         </tr>
 		<tr>
 			<td colspan="3">
-				<a href='http://velokvitochki.fixedgear.in.ua'><img src='<?= getServerName(); ?>/img/header.png' alt='Вело Квіточки'/></a>
+				<a href='http://velokvitochki.fixedgear.in.ua'><img src='<?= getServerName(); ?>/img/mail-logo.png' alt='Вело Квіточки'/></a>
 			</td>
 		</tr>
 		<tr>
@@ -70,7 +70,12 @@ function getRegistrationDetails($id) {
 				<?=$info['id']?>
 			</td>
 			<td width="170 px"></td>
-		</tr>		
+		</tr>
+		<tr>
+			<td colspan="3" style="text-indent: 10px; padding: 10px">
+				Якщо у тебе залишились питання, не соромся і напиши нам листа на пошту <a href="mailto:velogoroshina@gmail.com">velogoroshina@gmail.com</a>
+			</td>
+		</tr>
 	</table>
 </body>
 	

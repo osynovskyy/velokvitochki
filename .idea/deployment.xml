@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="velokvitochki">
+  <component name="PublishConfigData" autoUpload="Always" serverName="velokvitochki" uploadOnCheckin="dc6f5204-ae4d-48d7-9b89-b0918e027771">
     <serverData>
       <paths name="velokvitochki">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/psd" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="velokvitochki" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
